@@ -1,0 +1,14 @@
+{
+  "name": "skillbridge",
+  "private": true,
+  "version": "1.0.0",
+  "description": "SkillBridge AI-powered career development platform",
+  "scripts": {
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && .venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "dev": "concurrently --kill-others --names \"FRONTEND,BACKEND\" --prefix-colors \"cyan,magenta\" \"cd frontend && npm run dev\" \"cd backend && .venv\\Scripts\\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000\""
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.7"
+  }
+}

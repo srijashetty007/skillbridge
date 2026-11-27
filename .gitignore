@@ -1,0 +1,29 @@
+# Dependencies & virtual environments
+node_modules/
+frontend/node_modules/
+backend/.venv/
+.venv/
+__pycache__/
+*.py[cod]
+
+# Build outputs
+frontend/dist/
+dist/
+*.tsbuildinfo
+
+# Environment variables & secrets (never commit!)
+.env
+.env.*
+!.env.example
+backend/.env
+frontend/.env
+
+# Local SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+backend/*.db
+
+# OS & editor files
+.DS_Store
+Thumbs.db
