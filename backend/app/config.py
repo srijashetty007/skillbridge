@@ -22,7 +22,7 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 1440
     GEMINI_API_KEY: str = ""
-    GEMINI_MODEL: str = "gemini-2.5-flash"
+    GEMINI_MODEL: str = "gemini-3.8-flash"
     CORS_ORIGINS: str = "http://localhost:5173,http://127.0.0.1:5173"
 
     @property
@@ -53,6 +53,6 @@ def get_gemini_config() -> Tuple[str, str]:
     model = (
         file_values.get("GEMINI_MODEL")
         or os.environ.get("GEMINI_MODEL")
-        or "gemini-2.5-flash"
+        or "gemini-3.8-flash"
     ).strip()
     return api_key, model
